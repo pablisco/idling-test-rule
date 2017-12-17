@@ -1,3 +1,6 @@
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+}
 apply plugin: 'com.android.library'
 
 android {
@@ -27,4 +30,9 @@ dependencies {
     testCompile 'org.mockito:mockito-core:2.7.18'
     testCompile 'org.assertj:assertj-core:2.6.0'
 //    androidTestCompile 'com.android.support.test:runner:0.5'
+}
+
+bintray {
+    user = "$bintrayUser"
+    key = "$bintrayPassword"
 }
